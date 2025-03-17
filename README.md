@@ -35,10 +35,10 @@ npm install
 ### 3. Run Development Server
 
 ```bash
-ng serve
+ng serve --open
 ```
 
-Navigate to `http://localhost:4200/` to view the application. It will automatically reload upon changes.
+This will automatically open `http://localhost:4200/` in your browser. The application will reload upon changes.
 
 ## Code Scaffolding
 
@@ -55,7 +55,7 @@ For other Angular CLI commands, refer to the [Angular CLI Documentation](https:/
 To build the project, run:
 
 ```bash
-ng build
+ng build --prod
 ```
 
 The build artifacts will be stored in the `dist/` directory.
@@ -86,9 +86,11 @@ To deploy the project on a hosting platform (e.g., Firebase, Vercel, or Netlify)
 
 1. Build the project using `ng build --prod`.
 2. Upload the contents of the `dist/` folder to your hosting provider.
+3. Configure the hosting settings according to your provider’s documentation.
 
-## Live Demo (if available)
+## Live Demo
 
+If the project is deployed online, you can access it here:
 [![Run Live](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://your-live-demo-link.com)
 
 ## Further Help
