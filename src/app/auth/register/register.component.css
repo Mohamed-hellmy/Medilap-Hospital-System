@@ -1,0 +1,40 @@
+button {
+  background-color:rgb(131, 104, 156) !important ;
+  pointer-events: painted !important;
+  
+  
+}
+button:hover{
+background-color:rgb(106, 52, 157) !important;
+
+}
+.log-home{
+
+  z-index: -111;
+  }
+.p {
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+@media (max-width: 767px) {
+  
+    h2 {
+      font-size: 28px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+  
+    h2 {
+      font-size: 35px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+  
+    h2 {
+      font-size: 65px;
+    }
+  }
+  
+  

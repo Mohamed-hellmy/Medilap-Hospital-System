@@ -1,0 +1,57 @@
+
+<div *ngIf="doctorTime" class="doctor-card row p-5 bg-white rounded-5 shadow-lg mx-auto mb-4">
+    <div class="col-sm-5 col-md-3 col-lg-2 rounded-circle overflow-hidden">
+     <img class="w-100" src="../../assets/843293.png" alt="">
+    </div>
+    <div class="col-md-6 col-lg-5">
+     <h5 class="mb-1">Dr/ {{docData?.name}}</h5>
+     <p class="text-muted">{{docData?.description}}</p>
+      <p class="mb-1"><fa-icon class="text-primary" [icon]="star"></fa-icon>
+         <fa-icon class="text-primary" [icon]="star"></fa-icon>
+         <fa-icon class="text-primary" [icon]="star"></fa-icon>
+         <fa-icon class="text-primary" [icon]="star"></fa-icon>
+         <fa-icon class="text-primary" [icon]="hstar"></fa-icon></p>
+     <p class="text-muted fw-light">rate from 233 patient...</p>
+     <p><fa-icon class="text-primary me-2" [icon]="Stethoscope"></fa-icon> {{docData?.deptname}}</p>
+     <p><fa-icon class="text-primary me-2" [icon]="location"></fa-icon> Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+     <p><fa-icon class="text-primary me-2" [icon]="money"></fa-icon> {{docData?.price}}.</p>
+     <p><fa-icon class="text-primary me-2" [icon]="clock"></fa-icon> wait time 10min.</p>
+     <p><fa-icon class="text-primary me-2" [icon]="phone"></fa-icon> 0122897564</p>
+
+    </div>
+    <div class=" col-lg-5 text-center d-flex justify-content-center">
+     <div *ngIf="doctorTime" class="row  ">
+         <div  *ngFor="let doc of doctorTime" class="col-md-4 mb-2 times">
+             <div  class="bg-primary text-white p-2 rounded-top-3 text-center">
+                 <h6  class="mb-0">{{doc.day.split(' ')[0]}} <br> {{doc.day.split(' ')[1]}} </h6>
+
+             </div>
+             
+                <div class="time">
+                 <button (click)="selectBookTime( doc.day,$event)" *ngFor="let date of doc.workScheduleTime"
+                  [disabled]="!date.status" [ngClass]="!date.status? notAvilable :null"
+                   [ngClass]="date.time==bookingTime && doc.day==day? timeSelcted : null"
+                   class="my-1" [value]="date.time">{{date.time}}</button>
+                  
+                 
+                </div>
+             
+             <div class="bg-danger text-white p-1 rounded-bottom-3 text-center">
+                 <button (click)="printdate()" [disabled]="!bookingTime && doc.day!=day"
+                  class="mb-0 bg-transparent border-0 text-white">book now</button>
+
+             </div>
+             <div *ngIf="toost" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                  <div class="toast-body">
+                    Hello, world! This is a toast message.
+                  </div>
+                  <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+              </div>
+         </div>
+        
+        
+     </div>
+    </div>
+ </div>

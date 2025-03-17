@@ -1,0 +1,56 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  .doc-data-1 {
+    border: 2px solid #C5DCFF;
+    border-radius: 20px;
+}
+
+.div-bcolor {
+    background-color: rgb(252, 252, 252);
+}
+
+.my-patients-h {
+    font-size: 15px;
+}
+
+.my-patients {
+    border: 2px solid #C5DCFF;
+    border-radius: 20px;
+}
+
+.doc-data-2 {
+    overflow-y: scroll;
+    max-height: 620px;
+    overflow-x: scroll;
+}
+
+.doc-send-data {
+    border: 2px solid rgb(128, 196, 223);
+    border-radius: 20px;
+}
+
+.color-1 {
+    background-color: #C5DCFF;
+    color: black;
+}
+
+.color-2 {
+    background-color: #9083D5;
+    color: black;
+}
+.tcolor-1 {
+    color: #C5DCFF;
+}
+
+.tcolor-2 {
+    color: #9083D5;
+    font-weight: 700;
+}

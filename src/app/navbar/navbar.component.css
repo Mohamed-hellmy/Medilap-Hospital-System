@@ -1,0 +1,16 @@
+
+@media only screen and (max-width:1000px) {
+    nav{
+        background-color: white;
+    }
+}
+
+
+nav .nav-link{
+    color:black;
+    font-weight: bold;
+}
+
+nav{
+    z-index: 333333;
+}

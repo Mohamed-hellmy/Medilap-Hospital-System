@@ -1,0 +1,94 @@
+<img class="position-absolute end-0 log-home" src="../../../assets/Vector.png" alt="">
+<div class="container pt-5">
+    <!-- start help section -->
+    <div class="row pt-5 d-flex align-items-center">
+      <div class="col-12 col-md-6 mx-auto text-center text-sm-left">
+        <h2 class="h2">We help people to get an appointment in online</h2>
+        <p class="p">
+          Lorem Media is a full-service social media agency. We offer businesses
+          innovative solutions that deliver the right type of audience to you in
+          the most effective strategies possible. We strive to develop a community
+          around your business, polishing your branding, and improving your public
+          relations.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 mx-auto">
+        <img src="../../../assets/Colleagues discussing startup idea - 640x427 1.png" alt="photo" class="img-fluid">
+      </div>
+    <!-- end help section -->
+    </div> 
+    <h2 class="text-secondary fs-1">Sign Up</h2>
+    <p class="text-secondary">Please Sign Up To Continue</p>
+    <!-- start form -->
+    <form class="row g-3" [formGroup]="form"  (submit)="handleSubmit($event)">
+      <div class="col-12 col-md-6">
+        <input type="text" class="form-control my-1" formControlName="fName" placeholder="First Name" />
+        <span  *ngIf="form.controls.fName.touched && form.controls.fName.errors?.['required']" class="text-danger">
+          this field is required
+          </span>
+      </div>
+      <div class="col-12 col-md-6">
+        <input type="text" class="form-control my-1" formControlName="lName" placeholder="Last Name" />
+        <span  *ngIf="form.controls.lName.touched && form.controls.lName.errors?.['required']" class="text-danger">
+          this field is required
+          </span>
+      </div>
+      <div class="col-12 col-md-6">
+        <input type="email" class="form-control my-1" formControlName="email" placeholder="Email" />
+        <span  *ngIf="form.controls.email.touched && form.controls.email.errors?.['required']" class="text-danger">
+          please enter your email
+          </span>
+      </div>
+      <div class="col-12 col-md-6">
+        <input type="tel" class="form-control my-1" formControlName="mobile" placeholder="Phone Number" />
+        <span  *ngIf="form.controls.mobile.touched && form.controls.mobile.errors?.['required']" class="text-danger">
+          please enter your Number
+          </span>
+      </div>
+      <div class="col-12 col-md-6">
+        <input type="date" class="form-control my-1" formControlName="dob" placeholder="Date of Birth"/>
+        <span  *ngIf="form.controls.dob.touched && form.controls.dob.errors?.['required']" class="text-danger">
+          please choose your birth date
+          </span>
+      </div>
+      <div class="col-12 col-md-6">
+        <select class="form-select my-1" formControlName="gender">
+          <option value="" selected disabled hidden>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <span  *ngIf="form.controls.gender.touched && form.controls.gender.errors?.['required']" class="text-danger">
+          please choose your gender
+          </span>
+      </div>
+      <div class="col-12 ">
+        <input type="text" class="form-control my-1" formControlName="address" placeholder="Enter your Address ..." />
+        <span  *ngIf="form.controls.address.touched && form.controls.address.errors?.['required']" class="text-danger">
+          this field is required
+          </span>
+      </div>
+      <div class="col-12 col-md-6">
+        <input type="password" class="form-control my-1" formControlName="password" placeholder="password"/>
+        <span  *ngIf="form.controls.password.touched && form.controls.password.errors?.['required']" class="text-danger">
+          please enter password
+        </span>
+        <span  *ngIf="form.controls.password.touched && form.controls.password.errors?.['minLength']" class="text-danger">
+            please enter a valid password
+        </span>
+      </div>
+      <div class="col-12 col-md-6">
+        <input type="password" class="form-control my-1" formControlName="password" placeholder="confirm password"/>
+        <span  *ngIf="form.controls.password.touched && form.controls.password.errors?.['required']" class="text-danger">
+          please enter password
+        </span>
+        <span  *ngIf="form.controls.password.touched && form.controls.password.errors?.['minLength']" class="text-danger">
+            please enter a valid password
+        </span>
+      </div>
+      <div class="col-12 text-center">
+        <button (click)="submitUserData()" type="submit" class="btn btn-primary btn-lg rounded-3 border-0 p-2 my-1 w-25" [disabled]="form.invalid">Register</button>
+      </div>
+    </form>
+    <!-- end form -->
+  </div>
+  

@@ -1,0 +1,39 @@
+
+
+button.pointer{
+  cursor: pointer;
+}
+
+
+.p {
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+
+@media (max-width: 767px) {
+  
+    h2 {
+      font-size: 28px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+  
+    h2 {
+      font-size: 35px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+  
+    h2 {
+      font-size: 65px;
+    }
+  }
+
+
+.log-home{
+
+z-index: -111;
+}
+  

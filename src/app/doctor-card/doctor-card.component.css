@@ -1,0 +1,23 @@
+.doctor-card{
+    width: 80%;
+}
+
+.times p{
+    cursor: pointer;
+}
+.time{
+    height: 200px;
+    overflow-y: scroll;
+    font-size: .8rem;
+}
+
+.time button{
+    border: 0;
+    
+}
+.mutbook{
+    text-decoration: line-through;
+}
+.pointer{
+    cursor: pointer;
+}

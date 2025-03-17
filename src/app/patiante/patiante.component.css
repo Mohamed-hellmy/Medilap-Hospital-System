@@ -1,0 +1,57 @@
+.doc-data-1 {
+    border: 2px solid #C5DCFF;
+    border-radius: 20px;
+}
+
+.div-bcolor {
+    background-color: rgb(252, 252, 252);
+}
+
+.my-patients-h {
+    font-size: 15px;
+}
+
+.my-patients {
+    border: 2px solid #C5DCFF;
+    border-radius: 20px;
+}
+
+.doc-data-2 {
+    overflow-y: scroll;
+    max-height: 620px;
+    overflow-x: scroll;
+}
+
+.doc-send-data {
+    border: 2px solid rgb(128, 196, 223);
+    border-radius: 20px;
+}
+.color-1 {
+    background-image: linear-gradient(68deg, #9083D5 9.64%, #807593 92.49%);
+    background-size: cover;
+    color: black;
+    border-radius: 20px;
+}
+
+.color-2 {
+    background-color: #9083D5;
+    color: black;
+}
+.tcolor-1 {
+    color: #C5DCFF;
+}
+
+.tcolor-2 {
+    
+        background-image: linear-gradient(68deg, #9083D5 9.64%, #807593 92.49%);
+        width: fit-content;
+        color: white; 
+        padding: 5px; 
+        border-radius: 20px;
+}
+
+.doc-details p{
+    color: #807593;
+    font-weight: bold;
+    font-size: 1.25rem;
+}

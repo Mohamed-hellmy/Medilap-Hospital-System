@@ -1,0 +1,26 @@
+
+<div class="container ">
+    <p>{{doctorInfo?.name}}</p>
+  <p>{{doctorInfo?.deptname}}</p>
+  <p>{{doctorInfo?.description}}</p>
+  <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>date Of book</th>
+          <th>time</th>
+          <th>write prescription</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center" *ngFor="let book of doctorBook ">
+          <td >{{book.patName}}</td>
+          <td>{{book.dateOfBook}}</td>
+          <td>{{convertTimeFormat(book.timeOfBook)}}</td>
+          <td> <button class="btn btn-primary" (click)="writePrescription(book.patID,book.id)">Write</button></td>
+         
+        
+        </tr>
+      </tbody>
+    </table>
+  </div>

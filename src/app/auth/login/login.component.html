@@ -1,0 +1,78 @@
+<img class="position-absolute end-0 log-home" src="../../../assets/Vector.png" alt="">
+  <div class=" container pt-5 ">
+    <!-- start help section -->
+    <div class="row pt-5 d-flex align-items-center">
+      <div class="col-12 col-md-6 mx-auto text-center d-sm-block">
+        <h2 class="h2">We help people to get an appointment in online</h2>
+        <p class="p">
+          Lorem Media is a full-service social media agency. We offer businesses
+          innovative solutions that deliver the right type of audience to you in
+          the most effective strategies possible. We strive to develop a community
+          around your business, polishing your branding, and improving your public
+          relations.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 mx-auto ">
+        <img src="assets/doing coding.png" alt="photo" class="img-fluid">
+      </div>
+    <!-- end help section -->
+    </div> 
+    <!-- start form -->
+    <div class="row">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-d col-sm-12 col-xs-12 mt-5 mx-auto">
+          <h2 class="text-secondary fs-1">Sign In</h2>
+         <div class="d-flex  justify-content-between">
+          <p class="text-secondary">Please Login To Continue</p>
+        <div>
+          <button (click)="patint()" [ngClass]="ispatint ? changcolor : null" class="btn btn-primary text-white me-2 border-0" >Patinte</button>
+          <button (click)="doctor()" [ngClass]="isdoctor ? changcolor : null" class="btn btn-primary text-white border-0">Doctor</button></div>
+         </div>
+            <form *ngIf="ispatint" [formGroup]="form" (submit)="handleSubmit($event)">
+                <div class="col-12">
+                  <input type="email" class="form-control my-3" formControlName="email" placeholder="Email" />
+                  <span *ngIf="form.controls.email.touched && form.controls.email.errors?.['required']" class="text-danger">
+                    Please enter your email
+                  </span>
+                </div>
+                <div class="col-12">
+                  <input type="password" class="form-control my-3" formControlName="password" placeholder="Password" />
+                  <span *ngIf="form.controls.password.touched && form.controls.password.errors?.['required']" class="text-danger">
+                    Please enter a password
+                  </span>
+                  <span *ngIf="form.controls.password.touched && form.controls.password.errors?.['minlength']" class="text-danger">
+                    your password is too short
+                  </span>
+                </div>
+                
+                <div class="col-12 text-center">
+                  <button (click)="login()" type="submit" class="btn btn-primary pointer px-3 py-2" >Sign in</button>
+                </div>
+              </form>
+              <form *ngIf="isdoctor" [formGroup]="docform" (submit)="handleSubmit($event)">
+                <div class="col-12">
+                  <input type="email" class="form-control my-3" formControlName="email" placeholder="Email" />
+                  <span *ngIf="docform.controls.email.touched && docform.controls.email.errors?.['required']" class="text-danger">
+                    Please enter your email
+                  </span>
+                </div>
+                <div class="col-12">
+                  <input type="password" class="form-control my-3" formControlName="password" placeholder="Password" />
+                  <span *ngIf="docform.controls.password.touched && docform.controls.password.errors?.['required']" class="text-danger">
+                    Please enter a password
+                  </span>
+                  <span *ngIf="docform.controls.password.touched && docform.controls.password.errors?.['minlength']" class="text-danger">
+                    your password is too short
+                  </span>
+                </div>
+                
+                <div class="col-12 text-center">
+                  <button (click)="doclogin()" type="submit" class="btn btn-primary pointer px-3 py-2" >Sign in</button>
+                </div>
+              </form>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-d col-sm-12 col-xs-12 ">
+            <img  src="assets/Employeeprovidinginformation.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    <!-- end form -->
+  </div>

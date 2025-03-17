@@ -1,0 +1,77 @@
+
+<section class="doc-Profile pt-3 pt-5 ">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="tcolor-2"> Doctor Profile </h3>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="doc-data pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="doc-data-1 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 p-3 div-bcolor mt-2">
+                <div class="container">
+                    <div class="row">
+                        <div
+                            class="doc-p-img col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 text-center d-md-block">
+                            <img [src]="doctorInfo?.profilePic" class="img-thumbnail" width="100" height="100" style="border-radius: 50%;">
+                        </div>
+                        <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12">
+  
+                        </div>
+                        <div
+                            class="doc-p-name col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 pt-5 text-center d-md-block">
+                            <!-- <div *ngIf="docdata"> -->
+                            <h5 class="tcolor-2">Dr/ {{doctorInfo?.name}} </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="doc-details pt-4 col-12">
+                            <h6> Details : </h6>
+                            <!-- -->
+                            <div  *ngIf="!doctorInfo">
+                                <p class="tcolor-2" style="display: inline;"> Loading <br> </p>
+                                <div class="spinner-border text-primary m-2" style="width: 2rem; height: 2rem;"
+                                    role="status"></div>
+                            </div>
+  
+                            <!-- <div *ngIf="docdata"> -->
+                            <div>
+                                <p class="tcolor-2 fw-900"> Name: <span class="text-secondary">{{doctorInfo?.name}}</span></p> 
+                                <p class="tcolor-2"> Department : <span class="text-secondary">{{doctorInfo?.deptname}}</span> </p>
+                                <!-- <p class="tcolor-2"> Department : <span class="text-secondary">{{doctorInfo?.hos}}</span> </p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-12 col-xs-12">
+            </div>
+            <div class="doc-data-2 col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 mt-2">
+                <div class="container my-patients p-4 div-bcolor">
+                    <div class="row">
+                        <div class="container">
+                           
+                                <h5 class="my-patients-h" style="color: #9083D5;"> My Patients Appointments </h5>
+                       
+                                                        
+                                <app-doctorpatientsappointments [doctorInfo]="doctorInfo" [tabledata]="doctorBook"> </app-doctorpatientsappointments>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+  
+        </div>
+  
+        <div class="row date-an-time mt-2 text-center">
+  
+        </div>
+  
+        
+    </div>
+  </section>

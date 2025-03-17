@@ -1,0 +1,61 @@
+<section class="book mb-5 py-5">
+
+    <div class="p-5 my-5">
+        <h3 class="fw-bold">Book now with the best doctors <br>
+            in Egypt in all specialties.</h3>
+        <p class="text-secondary">Please specify your search.</p>
+    </div>
+    <div class="container">
+        <div class="row mx-5 d-flex justify-content-center">
+            <div class="hospital col-lg-2 bg-white p-2 border-end">
+                <h5 class="fw-bold">Hospital <fa-icon class="text-primary" [icon]="fahosbital"></fa-icon></h5>
+                <select (change)="getHospitalValue($any($event.target).value)" class="w-100 border-0" name="" id="hosname">
+    
+                    <option *ngFor="let hos of hospitals" [value]="hos.name">{{hos.name}}</option>
+                    
+    
+                </select>
+            </div>
+            <div class="col-lg-2 bg-white p-2 border-end">
+                <h5 class="fw-bold">Specialization <fa-icon class="text-primary" [icon]="Stethoscope"></fa-icon></h5>
+                <select (change)="getDepartmentName($any($event.target).value)" class="w-100 border-0" name="" id="spatial">
+                  
+                        <option *ngFor="let dep of deptNames" [value]="dep.name">{{dep.name}}</option>
+                  
+                    
+    
+                </select>
+            </div>
+            <div class="col-lg-2 bg-white p-2">
+                <h5 class="fw-bold">doctors <fa-icon class="text-primary" [icon]="doctorhead"></fa-icon></h5>
+                
+                <input (keyup)="searchDoctor($event)"  type="text"  placeholder="search by doctor name ...">
+                <select (click)="getSpasifcDotorData($event)" class="w-100 border-0">
+                   <option *ngFor="let doc of doctorsForLoop"   [value]="doc.id">Dr/ {{doc.name}}</option>
+                       
+                </select>
+                
+            </div>
+            <div class="search col-lg-2 bg-danger p-3 d-flex align-items-center justify-content-center">
+                <h5 class=" text-white ">Search <fa-icon [icon]="search"></fa-icon></h5>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="p-5 justify-content-center">
+
+    <div *ngIf="!isdatasucsess" class="w-100 d-flex justify-content-center">
+        <span class="loader"></span>
+    </div>
+
+    <div *ngIf="doctor" >
+        <app-doctor-card (dataSucsess)="istrue($event)" [docData]="doctor"></app-doctor-card>
+    </div>
+
+    <div *ngIf="!doctor" >
+        <app-doctor-card (dataSucsess)="istrue($event)" *ngFor="let doc of doctorsData" [docData]="doc"></app-doctor-card>
+    </div>
+   
+     
+</section>

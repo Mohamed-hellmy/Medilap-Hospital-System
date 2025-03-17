@@ -1,0 +1,55 @@
+<div class="container consultant ">
+    <table class="table">
+      <thead>
+          <tr>
+            <th>Disease Name</th>
+            <th>Disease Details</th>
+            <th>disease treatment</th>
+            <th>doctor Name</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let diss of patientdata?.diseases">
+            <td>{{diss.diseaseName}}</td>
+            <td>{{diss.diseaseDetails}}</td>
+            <td>{{diss.diseasetreatment}}</td>
+            <td>{{diss.doctorName}}</td>
+          </tr>
+        </tbody>
+  </table>
+  <hr>
+  <h2>The prescription</h2>
+  <form [formGroup]="form">
+    <label for="diseaseName">disease Name</label>
+  <input formControlName="diseaseName" id="diseaseName" type="text" class="form-control mb-3 ">
+  <div class="alert alert-danger" role="alert" *ngIf="form.controls.diseaseName.errors?.['required'] && form.controls.diseaseName.touched" >
+    disease Name required
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="form.controls.diseaseName.errors?.['minlength'] && form.controls.diseaseName.touched" >
+   Tthere is no  disease Name have only two or one character
+  </div>
+    <label for="diseaseDetails">disease Details</label>
+  <input formControlName="diseaseDetails" id="diseaseDetails" type="text" class="form-control  mb-3">
+  <div class="alert alert-danger" role="alert" *ngIf="form.controls.diseaseDetails.errors?.['required'] && form.controls.diseaseDetails.touched" >
+    disease Details required
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="form.controls.diseaseDetails.errors?.['minlength'] && form.controls.diseaseDetails.touched" >
+   Tthere is no  disease Details have only two or one character
+  </div>
+    <label for="diseasetreatment">disease treatment</label>
+    <textarea formControlName="diseasetreatment" id="diseasetreatment" type="text" class="form-control  mb-3"></textarea>
+    <div class="alert alert-danger" role="alert" *ngIf="form.controls.diseasetreatment.errors?.['required'] && form.controls.diseasetreatment.touched" >
+      disease Details required
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="form.controls.diseasetreatment.errors?.['minlength'] && form.controls.diseasetreatment.touched" >
+     Tthere is no  disease Details have only two or one character
+    </div>
+  
+  </form>
+  <button [disabled]="form.invalid" (click)="sumit()" class="btn btn-primary">print</button>
+  </div>
+  
+  
+  
+  
