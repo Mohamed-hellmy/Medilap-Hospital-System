@@ -88,11 +88,6 @@ To deploy the project on a hosting platform (e.g., Firebase, Vercel, or Netlify)
 2. Upload the contents of the `dist/` folder to your hosting provider.
 3. Configure the hosting settings according to your provider’s documentation.
 
-## Live Demo
-
-If the project is deployed online, you can access it here:
-[![Run Live](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://your-live-demo-link.com)
-
 ## Further Help
 
 For more details on Angular CLI, visit the [Angular CLI Overview](https://angular.io/cli).
